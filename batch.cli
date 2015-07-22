@@ -1,6 +1,9 @@
 batch
 
-module add --name=org.postgresql --resources=/tmp/psql-jdbc.jar --dependencies=javax.api,javax.transaction.api
+module add --name=org.postgresql --resources=/tmp/postgresql-9.4-1201.jdbc41.jar --dependencies=javax.api,javax.transaction.api
 /subsystem=datasources/jdbc-driver=postgresql:add(driver-name=postgresql,driver-module-name=org.postgresql,driver-xa-datasource-class-name=org.postgresql.xa.PGXADataSource)
+
+/interface=management:write-attribute(name=inet-address,value=0.0.0.0)
+/interface=unsecure:write-attribute(name=inet-address,value=0.0.0.0)
 
 run-batch
