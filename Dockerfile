@@ -4,7 +4,7 @@ MAINTAINER ijazfx <ijazfx@gmail.com>
 USER root
 
 RUN yum -y install java-1.8.0-openjdk.x86_64
-RUN echo 2 | alternatives --config java
+#RUN echo 2 | alternatives --config java
 
 USER jboss
 
