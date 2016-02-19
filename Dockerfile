@@ -1,11 +1,9 @@
-FROM jboss/wildfly:8.2.1.Final
+FROM jboss/wildfly:10.0.0.Final
 MAINTAINER ijazfx <ijazfx@gmail.com>
 
 USER root
 
 RUN yum -y update
-#RUN yum -y install java-1.8.0-openjdk.x86_64
-#RUN echo 2 | alternatives --config java
 
 USER jboss
 
