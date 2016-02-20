@@ -14,6 +14,7 @@ RUN /tmp/add-users.sh
 ADD config.sh /tmp/
 ADD batch.cli /tmp/
 RUN /tmp/config.sh
+RUN rm -rf /opt/jboss/wildfly/standalone/configuration/standalone_xml_history
 
 EXPOSE 8080 9990
 
